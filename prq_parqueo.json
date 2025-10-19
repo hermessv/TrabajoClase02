@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "province_name": "Pichincha",
+    "name": "Parqueadero Centro",
+    "price_per_hour": 1.5
+  },
+  {
+    "id": 2,
+    "province_name": "Guayas",
+    "name": "Parqueadero Norte",
+    "price_per_hour": 2.0
+  }
+]
