@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "*.sql": "plaintext"
+  },
+  "search.exclude": {
+    "**/.vscode": true
+  }
+}

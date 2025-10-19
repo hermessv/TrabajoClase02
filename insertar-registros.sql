@@ -2,24 +2,30 @@
 -- Inserciones de prueba para el sistema de parqueo
 -- Se asumen tablas ya creadas por diseño-bd.sql
 
-SET FOREIGN_KEY_CHECKS = 0;
+-- Archivo: insertar-registros.sql (T-SQL version)
+-- Inserciones de prueba para el sistema de parqueo
+-- Se asumen tablas ya creadas por diseño-bd.sql (T-SQL version)
 
--- Insertar PRQ_Automoviles (especificando id para facilitar referencias)
-INSERT INTO `PRQ_Automoviles` (`id`, `color`, `year`, `manufacturer`, `type`) VALUES
+-- Insertar PRQ_Automoviles (usamos IDENTITY_INSERT para establecer ids)
+SET IDENTITY_INSERT [PRQ_Automoviles] ON;
+INSERT INTO [PRQ_Automoviles] ([id], [color], [year], [manufacturer], [type]) VALUES
 (1, 'Rojo', 2024, 'Toyota', 'sedán'),
 (2, 'Azul', 2020, 'Honda', 'sedán'),
 (3, 'Negro', 2022, 'Ford', '4x4'),
 (4, 'Blanco', 2025, 'Yamaha', 'moto'),
 (5, 'Gris', 2019, 'Chevrolet', 'sedán');
+SET IDENTITY_INSERT [PRQ_Automoviles] OFF;
 
 -- Insertar PRQ_Parqueo
-INSERT INTO `PRQ_Parqueo` (`id`, `province_name`, `name`, `price_per_hour`) VALUES
+SET IDENTITY_INSERT [PRQ_Parqueo] ON;
+INSERT INTO [PRQ_Parqueo] ([id], [province_name], [name], [price_per_hour]) VALUES
 (1, 'Pichincha', 'Parqueadero Centro', 1.50),
 (2, 'Guayas', 'Parqueadero Norte', 2.00);
+SET IDENTITY_INSERT [PRQ_Parqueo] OFF;
 
 -- Insertar PRQ_IngresoAutomoviles (15 registros combinando parkings y autos)
--- Usaremos fechas realistas 2024-2025; algunos exit_datetime serán NULL.
-INSERT INTO `PRQ_IngresoAutomoviles` (`consecutive`, `prq_parqueo_id`, `prq_automovil_id`, `entry_datetime`, `exit_datetime`) VALUES
+SET IDENTITY_INSERT [PRQ_IngresoAutomoviles] ON;
+INSERT INTO [PRQ_IngresoAutomoviles] ([consecutive], [prq_parqueo_id], [prq_automovil_id], [entry_datetime], [exit_datetime]) VALUES
 (1, 1, 1, '2024-11-01 08:15:00', '2024-11-01 11:30:00'),
 (2, 1, 2, '2024-11-02 09:00:00', '2024-11-02 12:45:00'),
 (3, 2, 3, '2024-12-10 14:20:00', '2024-12-10 16:00:00'),
@@ -35,7 +41,7 @@ INSERT INTO `PRQ_IngresoAutomoviles` (`consecutive`, `prq_parqueo_id`, `prq_auto
 (13, 2, 3, '2025-04-10 15:00:00', '2025-04-10 18:00:00'),
 (14, 1, 5, '2025-04-15 12:00:00', NULL),
 (15, 2, 4, '2025-05-01 06:30:00', '2025-05-01 07:00:00');
+SET IDENTITY_INSERT [PRQ_IngresoAutomoviles] OFF;
 
-SET FOREIGN_KEY_CHECKS = 1;
+-- End of insert script (T-SQL)
 
--- Fin del archivo
