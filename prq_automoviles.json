@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "color": "Rojo",
+    "year": 2024,
+    "manufacturer": "Toyota",
+    "type": "sedán"
+  },
+  {
+    "id": 2,
+    "color": "Azul",
+    "year": 2020,
+    "manufacturer": "Honda",
+    "type": "sedán"
+  },
+  {
+    "id": 3,
+    "color": "Negro",
+    "year": 2022,
+    "manufacturer": "Ford",
+    "type": "4x4"
+  },
+  {
+    "id": 4,
+    "color": "Blanco",
+    "year": 2025,
+    "manufacturer": "Yamaha",
+    "type": "moto"
+  },
+  {
+    "id": 5,
+    "color": "Gris",
+    "year": 2019,
+    "manufacturer": "Chevrolet",
+    "type": "sedán"
+  }
+]
