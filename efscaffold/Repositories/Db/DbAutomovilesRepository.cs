@@ -13,7 +13,7 @@ namespace efscaffold.Repositories.Db
 
         public async Task AddAsync(PrqAutomovil entity)
         {
-            _db.PRQ_Automoviles.Add(entity);
+            await _db.PRQ_Automoviles.AddAsync(entity);
             await _db.SaveChangesAsync();
         }
 

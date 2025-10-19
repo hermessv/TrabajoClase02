@@ -13,7 +13,7 @@ namespace efscaffold.Repositories.Db
 
         public async Task AddAsync(PrqParqueo entity)
         {
-            _db.PRQ_Parqueo.Add(entity);
+            await _db.PRQ_Parqueo.AddAsync(entity);
             await _db.SaveChangesAsync();
         }
 
